@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- * fmain - Entry point to access the printfs
+ * sugar - Entry point to access the printfs
  *
  * Return: 0 for success otherwise error
  */
-int fmain(void)
+int sugar(void)
 {
 	printf("Size of a char: %lu byte(s)\n", sizeof(char));
 	printf("Size of an int: %lu byte(s)\n", sizeof(int));
@@ -25,6 +25,6 @@ int fmain(void)
  */
 int main(void)
 {
-	fmain();
+	sugar();
 	return (0);
 }
