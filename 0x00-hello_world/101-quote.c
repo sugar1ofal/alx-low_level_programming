@@ -1,25 +1,25 @@
 #include <unistd.h>
 
 /**
- * fmain - Entry point for the write command
+ * sugar - Entry point for the write command
  *
  * Description: This function prints a message.
  *
  * Return: 1 on success. Error code otherwise
  */
-int fmain(void)
+int sugar(void)
 {
-	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
+	putchar("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
 	return (1);
 }
 
 /**
- * main - Entry point
+ * main - Entry point for me
  *
  * Return:  1 means sucess else error
  */
 int main(void)
 {
-	fmain();
+	sugar();
 	return (1);
 }
