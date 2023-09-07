@@ -1,11 +1,8 @@
 #include <stdio.h>
-
 /**
- * main - Program entry point
- *
- * Return: 0 on success. Error code otherwise
+ * main - Entry point
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
