@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 /**
- * fmain - Entry point for the printf command
+ * sugar - Entry point for the printf command
  *
  * Description: This function prints a message.
  *
  * Return: 0 on success. Error code otherwise
  */
-int fmain(void)
+int sugar(void)
 {
 	printf("%s\n", "with proper grammar, but the outcome is a piece of art,");
 	return (0);
@@ -23,7 +23,7 @@ int fmain(void)
  */
 int main(void)
 {
-	fmain();
+	sugar();
 	return (0);
 }
 
