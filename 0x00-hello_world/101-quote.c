@@ -10,10 +10,7 @@
 int sugar(void)
 {
 	const char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	for (int i = 0; message[i] != '\0'; i++)
-		{
-			putchar(message[i]);
-		}
+	write(1, message, 63);
 	return (1);
 }
 
