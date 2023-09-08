@@ -1,0 +1,364 @@
+0-positive_or_negative.c
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+
+/**
+ * main - Main Entry Point
+ *
+ * Return: 0 ensure it is a success
+ */
+int main(void)
+{
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (n == 0)
+	{
+		printf("%i is zero\n", n);
+	}
+	else if (n > 0)
+	{
+		printf("%i is positive\n", n);
+	}
+	else
+	{
+		printf("%i is negative\n", n);
+	}
+	return (0);
+}
+
+
+1-last_digit.c
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+
+/**
+ * main - Main Entry Point
+ *
+ * Return: 0 ensure it is a success
+ */
+int main(void)
+{
+	int n;
+	int ld;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	ld = n % 10;
+	printf("Last digit of %d is %d and is ", n, ld);
+	if (ld == 0)
+	{
+		printf("0\n");
+	}
+	else if (ld > 5)
+	{
+		printf("greater than 5\n");
+	}
+	else
+	{
+		printf("less than 6 and not 0\n");
+	}
+	return (0);
+}
+
+
+2-print_alphabet.c
+#include <stdio.h>
+
+/**
+ * main - Main Entry Point
+ *
+ * Return: 0 ensure it is a success
+ */
+int main(void)
+{
+	char l = 'a';
+
+	while (l <= 'z')
+	{
+		putchar(l);
+		l++;
+	}
+	putchar('\n');
+	return (0);
+}
+
+3-print_alphabets.c
+#include <stdio.h>
+
+/**
+ * main - Main Entry Point
+ *
+ * Return: 0 ensure it is a success
+ */
+int main(void)
+{
+	char l = 'a';
+	char u = 'A';
+
+	while (l <= 'z')
+	{
+		putchar(l);
+		l++;
+	}
+	while (u <= 'Z')
+	{
+		putchar(u);
+		u++;
+	}
+	putchar('\n');
+	return (0);
+}
+
+4-print_alphabt.c
+#include <stdio.h>
+
+/**
+ * main - Main Entry Point
+ *
+ * Return: 0 ensure it is a success
+ */
+int main(void)
+{
+	char l = 'a';
+
+	while (l <= 'z')
+	{
+		if (l != 'e' && l != 'q')
+		{
+			putchar(l);
+		}
+		l++;
+	}
+	putchar('\n');
+	return (0);
+}
+
+5-print_numbers.c
+#include <stdio.h>
+
+/**
+ * main - Main Entry Point
+ *
+ * Return: 0 ensure it is a success
+ */
+int main(void)
+{
+	int n = 0;
+
+	while (n <= 9)
+	{
+		printf("%i", n);
+		n++;
+	}
+	printf("\n");
+	return (0);
+}
+
+6-print_numberz.c
+#include <stdio.h>
+
+/**
+ * main - Main Entry Point
+ *
+ * Return: 0 ensure it is a success
+ */
+int main(void)
+{
+	int n = 0;
+
+	while (n <= 9)
+	{
+		putchar(n + '0');
+		n++;
+	}
+	putchar('\n');
+	return (0);
+}
+
+7-print_tebahpla.c
+#include <stdio.h>
+
+/**
+ * main - Main Entry Point
+ *
+ * Return: 0 ensure it is a success
+ */
+int main(void)
+{
+	char l = 'z';
+
+	while (l >= 'a')
+	{
+		putchar(l);
+		l--;
+	}
+	putchar('\n');
+	return (0);
+}
+
+8-print_base16.c
+#include <stdio.h>
+
+/**
+ * main - Main Entry Point
+ *
+ * Return: 0 ensure it is a success
+ */
+int main(void)
+{
+	char hexl = 'a';
+	char hexn = '0';
+
+	while (hexn <= '9')
+	{
+		putchar(hexn);
+		hexn++;
+	}
+	while (hexl <= 'f')
+	{
+		putchar(hexl);
+		hexl++;
+	}
+	putchar('\n');
+	return (0);
+}
+
+9-print_comb.c
+#include <stdio.h>
+
+/**
+ * main - Main Entry Point
+ *
+ * Return: 0 ensure it is a success
+ */
+int main(void)
+{
+	int n = 0;
+
+	while (n <= 9)
+	{
+		putchar(n + '0');
+		if (n < 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+		n++;
+	}
+	putchar('\n');
+	return (0);
+}
+
+100-print_comb3.c
+#include <stdio.h>
+
+/**
+ * main - Main Entry Point
+ *
+ * Return: 0 ensure it is a success
+ */
+int main(void)
+{
+	int n = 0, n1 = 1;
+
+	while (n <= 8)
+	{
+		n1 = n + 1;
+		while (n1 <= 9)
+		{
+			putchar(n + '0');
+			putchar(n1 + '0');
+			if (n != 8 || n1 != 9)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			n1++;
+		}
+		n++;
+	}
+	putchar('\n');
+	return (0);
+}
+
+101-print_comb4.c
+#include <stdio.h>
+
+/**
+ * main - Main Entry Point
+ *
+ * Return: 0 ensure it is a success
+ */
+int main(void)
+{
+	int n = 0, n1 = 1, n2 = 2;
+
+	while (n <= 8)
+	{
+		n1 = n + 1;
+		while (n1 <= 9)
+		{
+			n2 = n1 + 1;
+			while (n2 <= 9)
+			{
+				putchar(n + '0');
+				putchar(n1 + '0');
+				putchar(n2 + '0');
+				if (n != 7 || n1 != 8 || n2 != 9)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+				n2++;
+			}
+			n1++;
+		}
+		n++;
+	}
+	putchar('\n');
+	return (0);
+}
+
+102-print_comb5.c
+#include <stdio.h>
+
+/**
+ * main - Main Entry Point
+ *
+ * Return: 0 ensure it is a success
+ */
+int main(void)
+{
+	int n = 0, n1 = 1;
+
+	while (n <= 99)
+	{
+		n1 = n + 1;
+		while (n1 <= 99)
+		{
+			putchar(n / 10 + '0');
+			putchar(n % 10 + '0');
+			putchar(' ');
+			putchar(n1 / 10 + '0');
+			putchar(n1 % 10 + '0');
+			if (n != 98 || n1 != 99)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			n1++;
+		}
+		n++;
+	}
+	putchar('\n');
+	return (0);
+}
+
+README.md
+if is cool
+
+out
