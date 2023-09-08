@@ -9,9 +9,9 @@
  */
 int sugar(void)
 {
-	char *text = "and that piece of art is useful - Dora Korpar, 2015-10-19";
+	char *t = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	fwrite(text, sizeof(char), 59, stdout);
+	fwrite(t, sizeof(char), 59, stdout);
 	return (1);
 }
 
