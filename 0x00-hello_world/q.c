@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include <stdio.h>
 
 /**
  * sugar - Entry point for the write command
@@ -9,7 +9,7 @@
  */
 int sugar(void)
 {
-	write(1, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
+	fputs("Hello\n", stdout);
 	return (1);
 }
 
