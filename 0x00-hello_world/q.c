@@ -11,7 +11,7 @@ int sugar(void)
 {
 	char *text = "and that piece of art is useful - Dora Korpar, 2015-10-19";
 
-	fwrite(text, sizeof(char), strlen(text), stdout);
+	fwrite(text, sizeof(char), 59, stdout);
 	return (1);
 }
 
