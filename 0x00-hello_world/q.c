@@ -9,7 +9,8 @@
  */
 int sugar(void)
 {
-	fputs("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", stdout);
+	const char* text = "and that piece of art is useful - Dora Korpar, 2015-10-19";
+	fwrite(text, sizeof(char), strlen(text), stdout);
 	return (1);
 }
 
