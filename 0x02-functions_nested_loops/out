@@ -1,0 +1,468 @@
+#include "main.h"
+
+/**
+ * main -  prints _putchar followed by a new line
+ * Return:  0 means the program is successful
+ */
+int main(void)
+{
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
+
+	return (0);
+}
+#include "main.h"
+
+/**
+ * print_alphabet - Entry point
+ * Return:0
+ */
+
+void print_alphabet(void)
+{
+	char let = 'a';
+
+	while (let <= 'z')
+	{
+		_putchar(let);
+		let++;
+
+	}
+	_putchar('\n');
+
+}
+#include "main.h"
+
+/**
+ * print_alphabet_x10 - prints 10 times the alphabet, and a new line
+ */
+void print_alphabet_x10(void)
+{
+	char cha;
+	int d;
+
+	d = 0;
+
+	while (d < 10)
+	{
+		cha = 'a';
+		while (cha <= 'z')
+		{
+			_putchar(cha);
+			cha++;
+		}
+		_putchar('\n');
+		d++;
+	}
+}
+#include "main.h"
+
+/**
+ * _islower - checks for lowercase character
+ * @c: the character for checking
+ * Return: 1 if c is lowercase success, 0 otherwise or error
+ */
+int _islower(int c)
+{
+	return (c >= 'a' && c <= 'z');
+}
+#include "main.h"
+
+/**
+ * _isalpha - checks for both cases of  alphabetic characters
+ * @c: the character for checking
+ * Return: 1 meaning c is a letter, 0 otherwise or error
+ */
+int _isalpha(int c)
+{
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+}
+#include "main.h"
+
+/**
+ * print_sign - prints the sign of a number
+ * @n: the int for checking
+ * Return: 1 and prints + if n is greater than zero
+ * 0 and prints 0 if n is zero
+ * -1 and prints - if n is less than zero
+ */
+int print_sign(int n)
+{
+	if (n > 0)
+	{
+		_putchar('+');
+		return (1);
+	}
+	else if (n == 0)
+	{
+		_putchar('0');
+		return (0);
+	}
+	else
+	{
+		_putchar('-');
+		return (-1);
+	}
+}
+#include "main.h"
+
+/**
+ * _abs - computes the absolute value of an integer
+ * @n: the int to check
+ * Return: the absolute value of int
+ */
+int _abs(int n)
+{
+	if (n >= 0)
+	{
+		return (n);
+	}
+	return (-n);
+}
+#include "main.h"
+
+/**
+ * print_last_digit - prints the last digit of a number
+ * @n: the int to extract the last digit
+ * Return: value of the last digit
+ */
+int print_last_digit(int n)
+{
+	int a;
+
+	if (n < 0)
+		n = -n;
+
+	a = n % 10;
+
+	if (a < 0)
+		a = -a;
+
+	_putchar(a + '0');
+
+	return (a);
+}
+#include "main.h"
+
+/**
+ * jack_bauer - Prints every minutes of the day of jack bauer
+ */
+void jack_bauer(void)
+{
+	int h, m;
+
+	h = 0;
+
+	while (h <= 23)
+	{
+		m = 0;
+		while (m <= 59)
+		{
+			_putchar((h / 10) + '0');
+			_putchar((h % 10) + '0');
+			_putchar(':');
+			_putchar((m / 10) + '0');
+			_putchar((m % 10) + '0');
+			_putchar('\n');
+			m++;
+		}
+		h++;
+	}
+}
+#include "main.h"
+
+/**
+ * times_table - prints the 9 times table, starting with 0
+ */
+void times_table(void)
+{
+	int i, j, k;
+
+	i = 0;
+
+	while (i < 10)
+	{
+		j = 0;
+		while (j < 10)
+		{
+
+			k = j * i;
+			if (j == 0)
+			{
+				_putchar(k + '0');
+			}
+
+			if (k < 10 && j != 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(k + '0');
+			} else if (k >= 10)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar((k / 10) + '0');
+				_putchar((k % 10) + '0');
+			}
+			j++;
+		}
+		i++;
+		_putchar('\n');
+	}
+}
+#include "main.h"
+
+/**
+ * add - Adds two integers.
+ * @num1: The first integer to be added.
+ * @num2: The second integer to be added.
+ *
+ * Return: The result of the addition.
+ */
+int add(int num1, int num2)
+{
+	return (num1 + num2);
+}
+#include <unistd.h>
+#include <stdio.h>
+#include "main.h"
+
+/**
+ * print_to_98 - prints all natural numbers from n to 98,
+ * followed by a new line
+ * @n: print from this number
+ */
+void print_to_98(int n)
+{
+	char buffer[16];
+	int length;
+
+	if (n <= 98)
+	{
+		while (n <= 98)
+		{
+			length = sprintf(buffer, "%d", n);
+			write(1, buffer, length);
+			if (n != 98)
+				write(1, ", ", 2);
+			else
+				write(1, "\n", 1);
+			n++;
+		}
+	}
+	else if (n >= 98)
+	{
+		while (n >= 98)
+		{
+			length = sprintf(buffer, "%d", n);
+			write(1, buffer, length);
+			if (n != 98)
+				write(1, ", ", 2);
+			else
+				write(1, "\n", 1);
+			n--;
+		}
+	}
+}
+#include "main.h"
+
+/**
+ * print_times_table - Prints the times table of the input,
+ *                     starting with 0 and going.
+ * @n: The value of the times table to be printed currently.
+ */
+void print_times_table(int n)
+{
+	int num = 0, mul, pro;
+
+	if (n >= 0 && n <= 15)
+	{
+		while (num <= n)
+		{
+			_putchar('0');
+			mul = 1;
+
+			while (mul <= n)
+			{
+				_putchar(',');
+				_putchar(' ');
+
+				pro = num * mul;
+
+				if (pro <= 99)
+					_putchar(' ');
+				if (pro <= 9)
+					_putchar(' ');
+
+				if (pro >= 100)
+				{
+					_putchar((pro / 100) + '0');
+					_putchar(((pro / 10)) % 10 + '0');
+				}
+				else if (pro <= 99 && pro >= 10)
+				{
+					_putchar((pro / 10) + '0');
+				}
+				mul++;
+				_putchar((pro % 10) + '0');
+			}
+			num++;
+			_putchar('\n');
+		}
+	}
+}
+#include <stdio.h>
+
+/**
+ * main - Lists all the natural numbers below 1024 (excluded)
+ *        that are multiples of 3 or 5.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	int i = 0, sum = 0;
+
+	while (i < 1024)
+	{
+		if ((i % 3) == 0 || (i % 5) == 0)
+			sum += i;
+		i++;
+	}
+
+	printf("%d\n", sum);
+
+	return (0);
+}
+#include <stdio.h>
+
+/**
+ * main - Prints first 50 Fibonacci numbers, starting with 1 and 2,
+ *        separated by a comma followed by a space.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	int count = 0;
+	unsigned long fib1 = 0, fib2 = 1, sum;
+
+	while (count < 50)
+	{
+		sum = fib1 + fib2;
+		printf("%lu", sum);
+
+		fib1 = fib2;
+		fib2 = sum;
+
+		if (count == 49)
+			printf("\n");
+		else
+			printf(", ");
+		count++;
+	}
+
+	return (0);
+}
+#include <stdio.h>
+
+/**
+ * main - Prints the sum of even-valued Fibonacci sequence
+ *        terms not exceeding 4000000.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	unsigned long fib1 = 0, fib2 = 1, fibsum;
+	float tot_sum;
+
+	while (1)
+	{
+		fibsum = fib1 + fib2;
+		if (fibsum > 4000000)
+			break;
+
+		if ((fibsum % 2) == 0)
+			tot_sum += fibsum;
+
+		fib1 = fib2;
+		fib2 = fibsum;
+	}
+	printf("%.0f\n", tot_sum);
+
+	return (0);
+}
+#include <stdio.h>
+
+/**
+ * main - Prints the first 98 Fibonacci numbers
+ * Return: Always 0.
+ */
+int main(void)
+{
+	int count = 0;
+	unsigned long fib1 = 0, fib2 = 1, sum, half1, half2, fib1_half1, fib1_half2;
+	unsigned long fib2_half1, fib2_half2;
+
+	while (count < 92)
+	{
+		sum = fib1 + fib2;
+		printf("%lu, ", sum);
+
+		fib1 = fib2;
+		fib2 = sum;
+		count++;
+	}
+	fib1_half1 = fib1 / 10000000000;
+	fib2_half1 = fib2 / 10000000000;
+	fib1_half2 = fib1 % 10000000000;
+	fib2_half2 = fib2 % 10000000000;
+
+	for (count = 93; count < 99; count++)
+	{
+		half1 = fib1_half1 + fib2_half1;
+		half2 = fib1_half2 + fib2_half2;
+		if (fib1_half2 + fib2_half2 > 9999999999)
+		{
+			half1 += 1;
+			half2 %= 10000000000;
+		}
+		printf("%lu%lu", half1, half2);
+		if (count != 98)
+			printf(", ");
+		fib1_half1 = fib2_half1;
+		fib1_half2 = fib2_half2;
+		fib2_half1 = half1;
+		fib2_half2 = half2;
+	}
+	printf("\n");
+	return (0);
+}
+starting
+#ifndef MAIN_H
+#define MAIN_H
+
+int _putchar(char);
+void print_alphabet(void);
+void print_alphabet_x10(void);
+int _islower(int c);
+int _isalpha(int c);
+int print_sign(int n);
+int _abs(int);
+int print_last_digit(int);
+void jack_bauer(void);
+void times_table(void);
+int add(int, int);
+void print_to_98(int);
+void print_times_table(int n);
+
+#endif /* MAIN_H */
